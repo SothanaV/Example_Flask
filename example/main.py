@@ -27,7 +27,7 @@ def message(message):
 def upload():
 	if request.method == 'POST':
 		file = request.files['file']
-		filename = file.name
+		filename = file.filename
 		print(file,filename)
 		file.save('./upload/'+filename)
 	return render_template('upload.htm')
